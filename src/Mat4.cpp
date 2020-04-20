@@ -184,7 +184,7 @@ void Mat4::addCircle(Vec4 const &v, double r, int steps)
         vertices.push_back({r * std::cos(step_size * step) + v.getX(), r * std::sin(step_size * step) + v.getY(), v.getZ()});
     }
 
-    for (uint i = 0; i < vertices.size() - 1; i++)
+    for (unsigned int i = 0; i < vertices.size() - 1; i++)
     {
         addEdge(vertices[i], vertices[i + 1]);
     }
@@ -229,7 +229,7 @@ void Mat4::addCurve(double x0, double y0, double x1, double y1, double rx0, doub
         vertices.push_back(T);
     }
 
-    for (uint i = 0; i < vertices.size() - 1; i++)
+    for (unsigned int i = 0; i < vertices.size() - 1; i++)
     {
         addEdge({vertices[i][0][0], vertices[i][0][1], 0}, {vertices[i + 1][0][0], vertices[i + 1][0][1], 0});
     }

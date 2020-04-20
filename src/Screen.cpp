@@ -231,7 +231,7 @@ void Screen::fillTriangle(std::vector<Vec4> &verts, Color const &color)
             double zStep = (right.z - left.z) / (right.x - left.x);
             double z = left.z + zStep * xOffset;
 
-            for (uint x = std::ceil(left.x); x < std::ceil(right.x); x++)
+            for (unsigned int x = std::ceil(left.x); x < std::ceil(right.x); x++)
             {
                 if (zbuf(y, x) < z)
                 {
